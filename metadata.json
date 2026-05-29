@@ -1,0 +1,6 @@
+{
+  "name": "Dunyo Davlatlari",
+  "description": "Dunyo mamlakatlari haqida batafsil ma'lumotlar va interaktiv xarita.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

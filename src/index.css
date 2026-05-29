@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-slate-950: #0a0a0a;
+  --color-slate-900: #101010;
+  --color-slate-800: #161616;
+  --color-slate-700: #242424;
+  --color-slate-600: #2e2e2e;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-slate-50: #f8fafc;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide default leaflet border and shadow styles for consistent elegant ui */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  background: transparent !important;
+}
+
+.leaflet-bar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Tooltip custom borders */
+.custom-tooltip-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.custom-tooltip-wrapper::before {
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Scrollbar customization */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom fade pulse background effects */
+.globe-radial-mesh {
+  background-image: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.02) 50%, transparent 100%);
+}
